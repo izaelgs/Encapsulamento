@@ -12,19 +12,19 @@ public class Lista {
 	    }
 	}
 
-	public boolean valorInexistente( String v){
+	public boolean valorInexistente(String v){
 	    String hash = "" + ((v.length() * 2) / 3)+ v.substring(0, 2);
 	    
 	    if(!listaVazia()){
 	        Elemento atual = primeiro;	        
 	        do{
 	            if(!hash.equals(atual.hash)){
-	                System.out.println("	"+ v + " é diferente de " + atual.valor + " -->");
+	               // System.out.println("	"+ v + " é diferente de " + atual.valor + " -->");
 	                atual = atual.proximo;
 	                continue;
 	            }
 	            else if(hash.equals(atual.hash)){
-	                System.out.println("	" + v + " é igual a: " + atual.valor + " portanto não foi criado");
+	                //System.out.println("	" + v + " é igual a: " + atual.valor + " portanto não foi criado");
 	                atual = atual.proximo;
 	                return false;
 	            } else {
@@ -104,6 +104,23 @@ public class Lista {
 	            atual = atual.proximo;
 	        }while (atual!=null);
 	    }
+	}
+	
+	public int getIndice(String valor) {
+		if(!valorInexistente(valor)) {
+			Elemento atual = primeiro;
+			String hash = "" + ((valor.length() * 2) / 3)+ valor.substring(0, 2);
+			
+			do{
+				if(atual.hash.equals(hash)) {
+					System.out.printf("o indice do elemento %s é: %d", valor, atual.indice);
+					return atual.indice;
+				}
+				
+				atual = atual.proximo;
+			} while(atual != null);
+		}
+		return -1;
 	}
 
 	public static void main(String[] args) {

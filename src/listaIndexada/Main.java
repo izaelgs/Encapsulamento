@@ -6,13 +6,15 @@ public class Main {
 		l.adicionarLista("aa"); 
 		l.adicionarLista("bb"); 
 		l.adicionarLista("cc"); 
-		l.adicionarLista("dd"); 
+		l.adicionarLista("aa"); 
+		l.adicionarLista("dd");
 		l.adicionarLista("ee");
 		l.adicionarLista("ff");
-		l.adicionarLista("gg");
-		l.removerLista("aa"); 
+		l.removerLista("cc"); 
 		l.removerLista("bb"); 
 		l.removerLista("gg"); 		
-		l.imprimirLista(); 		 
+		l.imprimirLista();
+		System.out.println("   indice teste: ");
+		l.getIndice("ff");		
 	}
 }

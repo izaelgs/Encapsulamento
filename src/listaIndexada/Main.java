@@ -9,12 +9,15 @@ public class Main {
 		l.adicionarLista("aa"); 
 		l.adicionarLista("dd");
 		l.adicionarLista("ee");
-		l.adicionarLista("ff");
-		l.removerLista("cc"); 
-		l.removerLista("bb"); 
-		l.removerLista("gg"); 		
+		l.adicionarLista("ff");		 		
 		l.imprimirLista();
-		System.out.println("   indice teste: ");
-		l.getIndice("ff");		
+		l.removerLista("bb"); 
+		l.removerLista("cc"); 
+		l.removerLista("gg");		
+		l.imprimirLista();		
+		l.getIndice("ff");
+		l.removerLista(3);
+		l.imprimirLista();
+		l.getValor(1);
 	}
 }
